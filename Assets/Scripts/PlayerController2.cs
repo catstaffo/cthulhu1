@@ -21,6 +21,7 @@ public class PlayerController2 : MonoBehaviour
 	private int fishTotal;
 
 	public AudioClip collectSound;
+	public AudioClip damageSound;
 	private AudioSource audioPlayer;
 
 	public float speed = 15.0F;
@@ -29,6 +30,7 @@ public class PlayerController2 : MonoBehaviour
 	private Vector3 moveDirection = Vector3.zero;
 	public CharacterController controller;
 
+	public bool isBouncing;
 
 
 	
@@ -67,6 +69,7 @@ public class PlayerController2 : MonoBehaviour
 		TakeDamage(20);
 		}
 
+		
 	}
 
 	
@@ -78,6 +81,8 @@ public class PlayerController2 : MonoBehaviour
 		
 		if (collidedWith.tag == "Enemy"){
 			TakeDamage(20);
+
+			audioPlayer.PlayOneShot(damageSound);
 		}
 
         if (collidedWith.tag == "Fish") {
@@ -98,7 +103,9 @@ public class PlayerController2 : MonoBehaviour
         }
 	}
 	
-	
+	void StopBounce(){
+		isBouncing = false;
+	}
 
 	void TakeDamage(int damage)
 	{

@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - EnemyAI
     - Events
     - FishCollector
     - FollowPlayer
@@ -258,19 +259,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6284}
     - Class: 114
-      Script: {instanceID: 6396}
+      Script: {instanceID: 6398}
     - Class: 114
-      Script: {instanceID: 6538}
+      Script: {instanceID: 6540}
     - Class: 114
-      Script: {instanceID: 6654}
+      Script: {instanceID: 6656}
     - Class: 114
-      Script: {instanceID: 6704}
+      Script: {instanceID: 6706}
     - Class: 114
-      Script: {instanceID: 7342}
+      Script: {instanceID: 7344}
     - Class: 114
-      Script: {instanceID: 7652}
+      Script: {instanceID: 7654}
     - Class: 114
-      Script: {instanceID: 7896}
+      Script: {instanceID: 7898}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -372,17 +373,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5958}
     - Class: 114
       Script: {instanceID: 6274}
+    - Class: 114
+      Script: {instanceID: 6306}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
-    - Class: 135
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -397,6 +402,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -649,7 +656,7 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
-      Hash: c079a3f7ea4a1a4d5f235b20bf2a28cf
+      Hash: 800f1afc6bbbbe190016dee3442fca59
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController2
@@ -1499,6 +1506,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 6369ca6fa443528387918e6febfb71bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyAI
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
