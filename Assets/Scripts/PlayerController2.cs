@@ -9,7 +9,8 @@ using TMPro;
 
 public class PlayerController2 : MonoBehaviour
 {
-	
+	public Rigidbody rb;
+ 	
 
 	public static event Action OnPlayerDeath;
     public int maxHealth = 100;
@@ -25,13 +26,16 @@ public class PlayerController2 : MonoBehaviour
 	public float speed = 15.0F;
 	public float gravity = 20.0F;
 
-	
-	
 	private Vector3 moveDirection = Vector3.zero;
 	public CharacterController controller;
 
+
+
+	
+
 	void Start(){
 
+		rb = GetComponent<Rigidbody>();
 
 		GameObject[] fishArray = GameObject.FindGameObjectsWithTag("Fish");
 		fishTotal = fishArray.Length;
@@ -50,25 +54,32 @@ public class PlayerController2 : MonoBehaviour
 	
 		if (controller.isGrounded) 
 		{
-			
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= speed;
-		}
-
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			TakeDamage(20);
 		}
 		
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+		TakeDamage(20);
+		}
+
 	}
+
 	
+
 	void OnCollisionEnter(Collision coll)
-   
-    {   GameObject collidedWith = coll.gameObject;
+	{
+		
+		GameObject collidedWith = coll.gameObject;
+		
+		if (collidedWith.tag == "Enemy"){
+			TakeDamage(20);
+		}
+
         if (collidedWith.tag == "Fish") {
             Destroy(collidedWith);
 			fishTotal -= 1;
@@ -76,6 +87,7 @@ public class PlayerController2 : MonoBehaviour
             //int score = int.Parse(scoreGT.text);
             //score += 10;
             //scoreGT.text = score.ToString();
+         
 
 			audioPlayer.PlayOneShot(collectSound);
 
@@ -85,6 +97,8 @@ public class PlayerController2 : MonoBehaviour
 
         }
 	}
+	
+	
 
 	void TakeDamage(int damage)
 	{

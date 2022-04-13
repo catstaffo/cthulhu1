@@ -9,6 +9,7 @@ TagManager:
   - Fish2
   - Fish3
   - Walls
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - Seaweed
   - Walls
   - Player
-  - 
-  - 
+  - Ground
+  - Enemy
   - 
   - 
   - 

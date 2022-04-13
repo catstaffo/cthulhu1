@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637852128397871607
+      ticks: 637853023361326954
     m_Hash: 2309325353
   m_LockFileStatus:
     m_FilePath: C:/Users/catst/Desktop/Create with Code/cthulhu/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637852128398099150
+      ticks: 637853023361465985
     m_Hash: 3127969185
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -3804,9 +3804,39 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
         - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
+        - 4.9.1
+        - 4.9.2
         compatible:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
         - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
+        - 4.9.1
+        - 4.9.2
         verified: 4.3.2
       dependencies: []
       resolvedDependencies: []
@@ -3825,7 +3855,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637509898070000000
       documentationUrl: 
       hasRepository: 1
       repository:
