@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
-    public static Transform[] points;
+    public GameObject[] waypoints;
+    int current = 0;
+    float rotSpeed;
+    public float speed;
+    float WPradius = 1;
 
-    void Awake ()
+    void Update ()
     {
-        points = new Transform[transform.childCount];
-        for ( int i = 0; i < points.Length; i++)
+        if(Vector3.Distance(waypoints[current].transform.position, transform.position) < WPradius)
         {
-            points[i] = transform.GetChild(i);
+            current ++;
+            if (current >= waypoints.Length)
+            {
+                current = 0;
+            }
         }
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
     }
 }

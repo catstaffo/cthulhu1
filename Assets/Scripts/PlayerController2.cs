@@ -30,8 +30,6 @@ public class PlayerController2 : MonoBehaviour
 	private Vector3 moveDirection = Vector3.zero;
 	public CharacterController controller;
 
-	public bool isBouncing;
-
 
 	
 
@@ -103,9 +101,6 @@ public class PlayerController2 : MonoBehaviour
         }
 	}
 	
-	void StopBounce(){
-		isBouncing = false;
-	}
 
 	void TakeDamage(int damage)
 	{

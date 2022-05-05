@@ -8,21 +8,26 @@ public class GameManager : MonoBehaviour
 {
     
     public GameObject gameOverMenu;
-    
+    public GameObject pauseGame;
 
     private void OnEnable()
     {
         PlayerController2.OnPlayerDeath += EnableGameOverMenu;
         
+
     }
 
     private void OnDisable()
     {
         PlayerController2.OnPlayerDeath -= EnableGameOverMenu;
+        //GetComponent<PauseGameTime>().ResumeGame();
+
     }
     public void EnableGameOverMenu()
     {
+        //GetComponent<PauseGameTime>().PauseGame();
         gameOverMenu.SetActive(true);
+        
     }
 
      public void ReplayLevel()
