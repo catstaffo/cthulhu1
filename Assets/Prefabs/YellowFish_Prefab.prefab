@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2645211255977330527}
   - component: {fileID: 3339673296970270197}
   - component: {fileID: 7410181120211252738}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: YellowFish_Prefab
   m_TagString: Fish
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 293498075053018957}
   - component: {fileID: 3834547698164886489}
   - component: {fileID: 580818796871780263}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
